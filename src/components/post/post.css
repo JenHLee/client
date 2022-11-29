@@ -1,0 +1,64 @@
+/*Color set*/
+:root {
+    --point-color: #f74c25;
+    --background-color: #f7f6f2;
+    --topbar-background-color: #eed4af;
+    --key-font: 'Tiro Bangla', serif;
+    --main-font: 'Roboto', sans-serif;
+}
+.post{
+    width: 385px;
+    margin: 0px 25px 40px 25px;
+}
+
+.postImg{
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.postImg:hover{
+    box-shadow: 2px 2px 2px 2px rgb(112, 112, 112);
+}
+
+.postInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.postCat{
+    color: #be9656;
+    margin-top: 15px;
+    margin-right: 10px;
+    line-height: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.postTitle{
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.postDesc{
+    font-family: var(--main-font);
+    font-size: 14px;
+    color: #444;
+    line-height: 24px;
+    margin-top: 15px;
+    overflow: hidden; /*overflow makes hidden*/
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /*show until 4 lines*/
+    -webkit-box-orient: vertical; 
+
+}

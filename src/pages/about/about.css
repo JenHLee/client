@@ -1,0 +1,30 @@
+.about{
+    display: flex;
+    background-image: url("../../asset/img/bg23.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    padding-bottom: 450px;
+    font-family: var(--key-font);
+}
+
+.about_quote{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(255, 255, 255, 0.551);
+    padding: 50px;
+    font-size: 18px;
+    
+    font-style: italic;
+}
+
+.about_quote_span_div{
+    padding-top: 10px;
+}

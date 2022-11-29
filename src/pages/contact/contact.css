@@ -1,0 +1,74 @@
+.contact {
+    display: flex;
+    background-image: url("../../asset/img/bg22_2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    padding-bottom: 150px;
+    font-family: var(--key-font);
+}
+
+.contact_info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+}
+
+.contact_title {
+    font-size: 50px;
+    font-weight: 300;
+    padding-bottom: 200px;
+}
+
+.contact_info_detail {
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 50px;
+}
+
+.contact_info_name {
+    padding-bottom: 5px;
+}
+
+.contact_info_email {
+    padding-bottom: 10px;
+}
+
+.contact_info_icons_div {
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+.contact_info_icons_connect{
+    padding-bottom: 10px;
+}
+#icon1, #icon2, #icon3, #icon4 {
+    color: white;
+    padding: 10px;
+}
+
+#icon1:hover, #icon2:hover, #icon3:hover, #icon4:hover{
+    color: rgb(171, 149, 134);
+}
+
+.contact_info_email_mailto{
+    color: white;
+    text-decoration: none;
+    cursor: pointer; 
+}
+
+.contact_info_email_mailto:hover{
+    color: rgb(171, 149, 134);
+}
