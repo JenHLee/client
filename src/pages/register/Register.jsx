@@ -16,7 +16,8 @@ export default function Register() {
     console.log("before try/catch: " + username, email, password);
     try {
       // const res = await axiosInstance.post("/auth/register", {
-      const res = await axios.post("https://jenlog.herokuapp.com/api/auth/register", {
+      // const res = await axios.post("https://jenlog.herokuapp.com/api/auth/register", {
+      const res = await axios.post("/auth/register", {
         username,
         email,
         password,

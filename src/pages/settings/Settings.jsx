@@ -31,12 +31,14 @@ export default function Settings() {
             updatedUser.profilePic = filename;
             try {
                 // await axiosInstance.post("/upload", data);
-                await axios.post("https://jenlog.herokuapp.com/api/upload", data);
+                // await axios.post("https://jenlog.herokuapp.com/api/upload", data);
+                await axios.post("/upload", data);
             } catch (err) { }
         }
         try {
             // const res = await axiosInstance.put("/users/" + user._id, updatedUser);
-            const res = await axios.put("https://jenlog.herokuapp.com/api/users/" + user._id, updatedUser);
+            // const res = await axios.put("https://jenlog.herokuapp.com/api/users/" + user._id, updatedUser);
+            const res = await axios.put("/users/" + user._id, updatedUser);
             setSuccess(true);
             dispatch({ type: "UPDATE_SUCCESS", payload: res.data });
         } catch (err) {

@@ -15,7 +15,8 @@ export default function Login() {
     e.preventDefault();
     dispatch({ type: "LOGIN_START" });
     try {
-      const res = await axios.post("https://jenlog.herokuapp.com/api/auth/login", {
+      // const res = await axios.post("https://jenlog.herokuapp.com/api/auth/login", {
+      const res = await axios.post("/auth/login", {
       // const res = await axiosInstance.post("/auth/login", {
         username: userRef.current.value,
         password: passwordRef.current.value,
