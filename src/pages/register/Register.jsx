@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import axios from "axios";
+import {axiosInstance} from "../../config";
 import "./register.css";
 
 export default function Register() {
@@ -10,21 +10,15 @@ export default function Register() {
   const [error, setError] = useState(false);
 
   const handleSubmit = async (e) => {
-    //console.log("handlesubmit function in before event prevent");
     e.preventDefault();
-    //console.log("handlesubmit function in after event prevent");
-    //console.log("e: " + e);
     setError(false);
     console.log("before try/catch: " + username, email, password);
     try {
-      // console.log("try in");
-      const res = await axios.post("/auth/register", {
+      const res = await axiosInstance.post("/auth/register", {
         username,
         email,
         password,
       });
-      // console.log(res);
-      // console.log("after try: " + username, email, password);
       res.data && window.location.replace("/login");
     } catch (err) {
       console.log("catch in");
