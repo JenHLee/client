@@ -3,6 +3,7 @@ import SideBar from "../../components/sidebar/SideBar";
 import { useContext, useState } from "react";
 import Context from "../../context/Context";
 import {axiosInstance} from "../../config";
+import axios from "axios";
 
 export default function Settings() {
     const [file, setFile] = useState(null);
@@ -29,11 +30,13 @@ export default function Settings() {
             data.append("file", file);
             updatedUser.profilePic = filename;
             try {
-                await axiosInstance.post("/upload", data);
+                // await axiosInstance.post("/upload", data);
+                await axios.post("https://jenlog.herokuapp.com/api/upload", data);
             } catch (err) { }
         }
         try {
-            const res = await axiosInstance.put("/users/" + user._id, updatedUser);
+            // const res = await axiosInstance.put("/users/" + user._id, updatedUser);
+            const res = await axios.put("https://jenlog.herokuapp.com/api/users/" + user._id, updatedUser);
             setSuccess(true);
             dispatch({ type: "UPDATE_SUCCESS", payload: res.data });
         } catch (err) {

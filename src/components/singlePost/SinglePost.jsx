@@ -1,4 +1,5 @@
 import {axiosInstance} from "../../config";
+import axios from "axios";
 import { useContext, useEffect, useState } from "react";
 import { useLocation } from "react-router";
 import { Link } from "react-router-dom";
@@ -17,7 +18,8 @@ export default function SinglePost() {
 
     useEffect(() => {
         const getPost = async () => {
-            const res = await axiosInstance.get("/posts/" + path);
+            // const res = await axiosInstance.get("/posts/" + path);
+            const res = await axios.get("https://jenlog.herokuapp.com/api/posts/" + path);
             setPost(res.data);
             setTitle(res.data.title);
             setDesc(res.data.desc);
