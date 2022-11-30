@@ -9,8 +9,9 @@ export default function SideBar() {
 
     useEffect(() => {
         const getCats = async () => {
-            const res = await axiosInstance.get("/categories");
+            // const res = await axiosInstance.get("/categories");
             // const res = await axios.get("/categories");
+            const res = await axios.get("https://jenlog.herokuapp.com/api/categories");
             setCats(res.data);
         }
         getCats();

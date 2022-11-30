@@ -28,14 +28,14 @@ export default function Write() {
       try {
         // await axiosInstance.post("/upload", data);
         // await axios.post("https://jenlog.herokuapp.com/api/upload", data);
-        await axios.post("/upload", data);
+        await axios.post("https://jenlog.herokuapp.com/api/upload", data);
       } catch (err) {}
     }
     try {
       // const res = await axiosInstance.post("/posts", newPost);
       // const res = await axios.post("https://jenlog.herokuapp.com/api/posts", newPost);
-      const res = await axios.post("/posts", newPost);
-      window.location.replace("/post/" + res.data._id);
+      const res = await axios.post("https://jenlog.herokuapp.com/api/posts", newPost);
+      window.location.replace("https://jenlog.herokuapp.com/api/post/" + res.data._id);
     } catch (err) {}
   };
 

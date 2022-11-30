@@ -10,7 +10,7 @@ export default function SinglePost() {
     const location = useLocation();
     const path = location.pathname.split("/")[2]; //to get the userId (/post/userId) => [1] : post , [2] : userId
     const [post, setPost] = useState({});
-    const PF = "https://jennieblog.herokuapp.com/images/";
+    const PF = "https://jenlog.herokuapp.com/api/images/";
     const { user } = useContext(Context);
     const [title, setTitle] = useState("");
     const [desc, setDesc] = useState("");
@@ -20,7 +20,7 @@ export default function SinglePost() {
         const getPost = async () => {
             // const res = await axiosInstance.get("/posts/" + path);
             // const res = await axios.get("https://jenlog.herokuapp.com/api/posts/" + path);
-            const res = await axios.get("/posts/" + path);
+            const res = await axios.get("https://jenlog.herokuapp.com/api/posts/" + path);
             setPost(res.data);
             setTitle(res.data.title);
             setDesc(res.data.desc);
@@ -32,7 +32,7 @@ export default function SinglePost() {
     const handleDelete = () => {
         try {
             // axiosInstance.delete(`/posts/${post._id}`, {
-            axios.delete(`/posts/${post._id}`, {
+            axios.delete(`https://jenlog.herokuapp.com/api/posts/${post._id}`, {
                 data: { username: user.username },
             });
             window.location.replace("/");
@@ -42,7 +42,7 @@ export default function SinglePost() {
     const handleUpdate = async () => {
         try {
             // await axiosInstance.put(`/posts/${post._id}`, {
-            await axios.put(`/posts/${post._id}`, {
+            await axios.put(`https://jenlog.herokuapp.com/api/posts/${post._id}`, {
                 username: user.username,
                 title,
                 desc,

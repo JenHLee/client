@@ -12,7 +12,7 @@ export default function Settings() {
     const [password, setPassword] = useState("");
     const [success, setSuccess] = useState(false);
     const { user, dispatch } = useContext(Context);
-    const PF = "https://jennieblog.herokuapp.com/images/";
+    const PF = "https://jenlog.herokuapp.com/api/images/";
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -32,13 +32,13 @@ export default function Settings() {
             try {
                 // await axiosInstance.post("/upload", data);
                 // await axios.post("https://jenlog.herokuapp.com/api/upload", data);
-                await axios.post("/upload", data);
+                await axios.post("https://jenlog.herokuapp.com/api/upload", data);
             } catch (err) { }
         }
         try {
             // const res = await axiosInstance.put("/users/" + user._id, updatedUser);
             // const res = await axios.put("https://jenlog.herokuapp.com/api/users/" + user._id, updatedUser);
-            const res = await axios.put("/users/" + user._id, updatedUser);
+            const res = await axios.put("https://jenlog.herokuapp.com/api/users/" + user._id, updatedUser);
             setSuccess(true);
             dispatch({ type: "UPDATE_SUCCESS", payload: res.data });
         } catch (err) {

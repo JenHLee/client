@@ -17,7 +17,7 @@ export default function Register() {
     try {
       // const res = await axiosInstance.post("/auth/register", {
       // const res = await axios.post("https://jenlog.herokuapp.com/api/auth/register", {
-      const res = await axios.post("/auth/register", {
+      const res = await axios.post("https://jenlog.herokuapp.com/api/auth/register", {
         username,
         email,
         password,
